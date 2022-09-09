@@ -5,13 +5,28 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def curso(request):
+def inicio (request):
+
+    return render(request , "AppCoder/inicio.html")
+
+
+def estudiantes (request):
+    
+     return render(request , "AppCoder/estudiantes.html")
+
+
+def profesores (request):
+    
+     return render(request , "AppCoder/profesores.html")
+
+
+def cursos(request):
 
     materia = Curso(nombre= "Disenio web", camada=12345)
 
     materia.save()
 
-    return HttpResponse(f"Estoy guardando el primer curso.{materia.nombre}")
+    return render(request , "AppCoder/cursos.html")
 
 
 def entregables(request):
@@ -20,5 +35,5 @@ def entregables(request):
 
     ente1.save()
 
-    return HttpResponse(f"He guardado {ente1.nombre} con fecha de entrega {ente1.fechaEntrega}")
+    return render(request , "AppCoder/entregables.html")
 
