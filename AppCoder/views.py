@@ -22,18 +22,18 @@ def profesores (request):
 
 def cursos(request):
 
-    materia = Curso(nombre= "Disenio web", camada=12345)
+    #materia = Curso(nombre= "Disenio web", camada=12345)
 
-    materia.save()
+    #materia.save()
 
     return render(request , "AppCoder/cursos.html")
 
 
 def entregables(request):
 
-    ente1 = Entregable(nombre="Examen1" , fechaEntrega="2022-09-08")
+    #ente1 = Entregable(nombre="Examen1" , fechaEntrega="2022-09-08")
 
-    ente1.save()
+    #ente1.save()
 
     return render(request , "AppCoder/entregables.html")
 
