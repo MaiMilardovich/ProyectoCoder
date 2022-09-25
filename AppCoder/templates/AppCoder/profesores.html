@@ -5,6 +5,36 @@
 
 {% block titulo %} 
 
-Profesores a cargo
+Profesores de los distintos cursos
+
+
 
 {% endblock %}  
+
+{% block descripcion %}
+
+{% for profe in teachers %}
+
+    <ul>
+
+        <li>Nombre: {{profe.nombre}}</li>
+        <button>
+            <a href="{% url 'EliminarProfesores' profe.nombre %}">Borrar</a>
+        </button>
+
+        <button>
+            <a href="{% url 'EditarProfesores' profe.nombre %}">Editar</a>
+        </button>
+
+        <li>Profesion: {{profe.profesion}}</li>
+
+
+    </ul>
+
+{% endfor %} 
+
+
+<a href="{% url 'FormularioProfe' %}" >Agregar otro profesor  </a>
+
+
+{% endblock %}

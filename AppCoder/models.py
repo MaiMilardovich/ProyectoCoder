@@ -5,6 +5,9 @@ from django.db import models
 
 class Curso (models.Model):
 
+    def __str__(self):
+        return f"El curso es de {self.nombre}"
+
     nombre = models.CharField(max_length=60)
     camada = models.IntegerField()
 
@@ -17,6 +20,9 @@ class Estudiante(models.Model):
 
 
 class Profesor(models.Model):
+
+    def __str__(self):
+        return f"Profesor {self.nombre} {self.apellido}"
     
     nombre = models.CharField(max_length=60)
     apellido = models.CharField(max_length=60)

@@ -1,0 +1,25 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %} 
+
+Aqui podrás agregar los cursos que quieran
+
+{% endblock %}  
+
+{% block descripcion %}
+
+
+<form action=" " method="POST"> {% csrf_token %}
+
+    {{form.as_p}}
+
+    <input type="submit" values="Enviar">   
+
+</form> 
+
+
+
+{% endblock %}

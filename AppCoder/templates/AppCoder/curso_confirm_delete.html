@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %} 
+
+Aqui podrás agregar los cursos que quieran
+
+{% endblock %}  
+
+{% block descripcion %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <p> Estás seguro que desear borrar {{curso.nombre}} ? </p>
+    
+    <button type="submit"> Confirmar </button>   
+
+</form>
+
+
+{% endblock %}

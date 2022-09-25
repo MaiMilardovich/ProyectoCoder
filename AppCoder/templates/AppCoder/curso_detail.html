@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %} 
+
+Aqui podrás agregar los cursos que quieran
+
+{% endblock %}  
+
+{% block descripcion %}
+
+<p>Nombre del curso: {{curso.nombre}}</p>
+<p>Camada: {{curso.camada}}</p>
+
+<p><button>
+    <a href="{% url 'Cursos' %}" > Volver al listado </a>
+    </button>
+    </p>
+
+{% endblock %}
